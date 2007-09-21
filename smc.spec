@@ -1,6 +1,6 @@
 # TODO:
 # - fails on start:
-#   CEGUI::Exception: DynamicModule::DynamicModule - Failed to load module 
+#   CEGUI::Exception: DynamicModule::DynamicModule - Failed to load module
 #         'libCEGUIFreeImageImageCodec.so': libCEGUIFreeImageImageCodec.so:
 #          cannot open shared object file: No such file or directory
 #   CEGUI Exception occurred : DynamicModule::DynamicModule - Failed to load module
