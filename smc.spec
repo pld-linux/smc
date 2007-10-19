@@ -11,12 +11,12 @@
 # - music pack: http://downloads.sourceforge.net/smclone/SMC_music_4.0_high.zip
 Summary:	A jump-and-run game similar to classic sidescroller games
 Name:		smc
-Version:	1.1
+Version:	1.2
 Release:	0.1
 License:	GPL v3
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/smclone/%{name}-%{version}-fixed.tar.bz2
-# Source0-md5:	cae5b1ee5f81318e2ba95b8c6ad26ed9
+Source0:	http://dl.sourceforge.net/smclone/%{name}-%{version}.tar.bz2
+# Source0-md5:	0c42c8681e5a395f68ef93ca80b6fb80
 Source1:	%{name}.desktop
 URL:		http://www.secretmaryo.org/
 BuildRequires:	CEGUI-devel
