@@ -7,7 +7,6 @@
 #   'libCEGUIFreeImageImageCodec.so': libCEGUIFreeImageImageCodec.so:
 #   cannot open shared object file: No such file or directory
 #   lib is on libCEGUIFreeImageImageCodec.so.0 - anybody could help with this?
-# - pl summary, description and comment (in .desktop)
 # - music pack: http://downloads.sourceforge.net/smclone/SMC_music_4.0_high.zip
 Summary:	A jump-and-run game similar to classic sidescroller games
 Summary(pl.UTF-8):	Gra typu "skacz i biegnij" podobna do klasycznych przewijanych gier
