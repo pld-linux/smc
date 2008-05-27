@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Secret Maryo Chronicles
-Comment=Secret Maryo Chronicles
+Comment=Secret Maryo Chronicles game
+Comment[pl]=Gra Secret Maryo Chronicles
 Exec=smc
 Icon=smc
 Terminal=false
