@@ -10,6 +10,7 @@
 # - pl summary, description and comment (in .desktop)
 # - music pack: http://downloads.sourceforge.net/smclone/SMC_music_4.0_high.zip
 Summary:	A jump-and-run game similar to classic sidescroller games
+Summary(pl.UTF-8):	Gra typu "skacz i biegnij" podobna do klasycznych przewijanych gier
 Name:		smc
 Version:	1.5
 Release:	0.1
@@ -35,6 +36,13 @@ game with a style designed similar to classic sidescroller games. It
 uses the platform independent library SDL and, since version 0.98, the
 OpenGL accelerated Graphics Renderer. The game is developed in C++.
 
+%description -l pl.UTF-8
+Secret Maryo Chronicles to mająca otwarty kod źródłowy dwuwymiarowa
+gra platformowa w stylu podobnym do klasycznych gier z przewijanym
+ekranem. Wykorzystuje niezależną od platformy bibliotekę SDL oraz, od
+wersji 0.98, renderer graficzny z akceleracją OpenGL. Gra jest
+tworzona w C++.
+
 %prep
 %setup -q
 
@@ -44,7 +52,6 @@ OpenGL accelerated Graphics Renderer. The game is developed in C++.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
