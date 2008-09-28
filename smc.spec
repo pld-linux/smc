@@ -37,7 +37,7 @@ tworzona w C++.
 
 %prep
 %setup -q
-/usr/bin/unzip -qq -o /home/users/Arvenil/rpm/SOURCES/SMC_music_4.0_high.zip
+%{__unzip} -qq -o %{SOURCE1}
 
 %build
 %configure
