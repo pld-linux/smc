@@ -1,23 +1,15 @@
-# TODO:
-# - fails on start:
-#   CEGUI::Exception: DynamicModule::DynamicModule - Failed to load module
-#         'libCEGUIFreeImageImageCodec.so': libCEGUIFreeImageImageCodec.so:
-#          cannot open shared object file: No such file or directory
-#   CEGUI Exception occurred : DynamicModule::DynamicModule - Failed to load module
-#   'libCEGUIFreeImageImageCodec.so': libCEGUIFreeImageImageCodec.so:
-#   cannot open shared object file: No such file or directory
-#   lib is on libCEGUIFreeImageImageCodec.so.0 - anybody could help with this?
-# - music pack: http://downloads.sourceforge.net/smclone/SMC_music_4.0_high.zip
 Summary:	A jump-and-run game similar to classic sidescroller games
 Summary(pl.UTF-8):	Gra typu "skacz i biegnij" podobna do klasycznych przewijanych gier
 Name:		smc
-Version:	1.5
-Release:	0.1
+Version:	1.6
+Release:	1
 License:	GPL v3
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/smclone/%{name}-%{version}.tar.bz2
-# Source0-md5:	72d10648435c349988dcd053e5fe64fe
-Source1:	%{name}.desktop
+# Source0-md5:	f3197a5e61c1899637ff1a2a858db226
+Source1:	http://dl.sourceforge.net/smclone/SMC_music_4.0_high.zip
+# Source1-md5:	bb007603c723eddd6ccb007cc5f01cd6
+Source2:	%{name}.desktop
 URL:		http://www.secretmaryo.org/
 BuildRequires:	CEGUI-devel
 BuildRequires:	OpenGL-GLU-devel
@@ -27,6 +19,7 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	boost-devel >= 1.35.0
 BuildRequires:	libstdc++-devel
+BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,6 +37,7 @@ tworzona w C++.
 
 %prep
 %setup -q
+/usr/bin/unzip -qq -o /home/users/Arvenil/rpm/SOURCES/SMC_music_4.0_high.zip
 
 %build
 %configure
@@ -57,7 +51,7 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 	DESTDIR=$RPM_BUILD_ROOT
 
 # desktop file
-install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
 
 # icon
 cp -f data/icon/window_32.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
