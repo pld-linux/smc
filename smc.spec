@@ -1,12 +1,12 @@
 Summary:	A jump-and-run game similar to classic sidescroller games
 Summary(pl.UTF-8):	Gra typu "skacz i biegnij" podobna do klasycznych przewijanych gier
 Name:		smc
-Version:	1.6
+Version:	1.7
 Release:	1
 License:	GPL v3
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/smclone/%{name}-%{version}.tar.bz2
-# Source0-md5:	f3197a5e61c1899637ff1a2a858db226
+# Source0-md5:	6f924e55f55c151621ca9f921eee8e5a
 Source1:	http://dl.sourceforge.net/smclone/SMC_music_4.0_high.zip
 # Source1-md5:	bb007603c723eddd6ccb007cc5f01cd6
 Source2:	%{name}.desktop
