@@ -19,6 +19,7 @@ BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	boost-devel >= 1.35.0
 BuildRequires:	libstdc++-devel
+BuildRequires:	pkgconfig
 BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
