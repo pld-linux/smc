@@ -2,7 +2,7 @@ Summary:	A jump-and-run game similar to classic sidescroller games
 Summary(pl.UTF-8):	Gra typu "skacz i biegnij" podobna do klasycznych przewijanych gier
 Name:		smc
 Version:	1.9
-Release:	2
+Release:	3
 License:	GPL v3
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/smclone/%{name}-%{version}.tar.bz2
