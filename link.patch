@@ -1,0 +1,11 @@
+--- smc-1.9/configure.ac.orig	2010-11-03 20:56:15.107498755 +0100
++++ smc-1.9/configure.ac	2010-11-03 20:56:27.940830449 +0100
+@@ -55,7 +55,7 @@ AC_CHECK_LIB(SDL_ttf, TTF_Init, ,
+ # Check for the CEGUI library
+ PKG_CHECK_MODULES(CEGUI, CEGUI-OPENGL >= 0.5.0)
+ CPPFLAGS="$CPPFLAGS $CEGUI_CFLAGS"
+-LIBS="$LIBS $CEGUI_LIBS"
++LIBS="$LIBS $CEGUI_LIBS -lX11 -lboost_system"
+ 
+ # Check for the gettext library
+ AM_GNU_GETTEXT([external])

@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/smclone/%{name}-%{version}.tar.bz2
 Source1:	http://dl.sourceforge.net/sourceforge/smclone/SMC_Music_4.1_high.zip
 # Source1-md5:	f0d5fad6f1d0387bd909c93226698ba9
 Source2:	%{name}.desktop
+Patch0:		link.patch
 URL:		http://www.secretmaryo.org/
 BuildRequires:	CEGUI-devel
 BuildRequires:	OpenGL-GLU-devel
@@ -38,9 +39,14 @@ tworzona w C++.
 
 %prep
 %setup -q
+%patch0 -p1
 %{__unzip} -qq -o %{SOURCE1}
 
 %build
+export CXXFLAGS="%{rpmcxxflags} -DBOOST_FILESYSTEM_VERSION=2"
+%{__aclocal}
+%{__automake}
+%{__autoconf}
 %configure
 %{__make}
 
