@@ -39,7 +39,7 @@ tworzona w C++.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 %{__unzip} -qq -o %{SOURCE1}
 
 %build
